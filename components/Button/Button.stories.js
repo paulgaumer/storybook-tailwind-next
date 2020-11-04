@@ -5,7 +5,7 @@ export default {
   component: Button,
   title: 'Button',
   argTypes: {
-    backgroundColor: { control: 'color' },
+    color: { control: 'color' },
   },
 };
 
@@ -14,7 +14,12 @@ const Template = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   label: 'Medium Button',
-  size: 'medium',
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Secondary Button',
+  type: 'secondary',
 };
 
 export const Small = Template.bind({});
@@ -25,7 +30,6 @@ Small.args = {
 
 export const ClickEvent = Template.bind({});
 ClickEvent.args = {
-  ...Default.args,
   label: 'Prepare to be surprised',
   onClick: () => alert("I'm a modified click event!"),
 };
