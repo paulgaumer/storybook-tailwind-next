@@ -1,16 +1,16 @@
 import React from 'react';
-import CardsList from './CardsList';
+import CardsGrid from './CardsGrid';
 import * as CardStories from '../Card/Card.stories';
 
 export default {
-  component: CardsList,
-  title: 'Cards List',
+  component: CardsGrid,
+  title: 'Cards Grid',
   decorators: [
-    (story) => <div className="mx-auto max-w-7xl mt-32">{story()}</div>,
+    (story) => <div className="mx-auto max-w-6xl mt-32">{story()}</div>,
   ],
 };
 
-const Template = (args) => <CardsList {...args} />;
+const Template = (args) => <CardsGrid {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

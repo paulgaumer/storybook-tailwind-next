@@ -3,3 +3,8 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+/* CUSTOM CSS */
+body {
+  @apply bg-gray-300;
+}
