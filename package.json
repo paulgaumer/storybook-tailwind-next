@@ -8,7 +8,8 @@
     "start": "next start",
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll"
+    "build-storybook": "build-storybook --no-dll",
+    "chromatic": "npx chromatic --project-token a0ji8xr9brj"
   },
   "dependencies": {
     "next": "10.0.1",
@@ -26,6 +27,7 @@
     "@storybook/react": "^6.0.28",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "identity-obj-proxy": "^3.0.0",
