@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ label, size, onClick, color, type }) => {
-  if (type === 'secondary') {
-    const customColor = color ? color : null;
+  const customColor = color ? color : null;
 
+  if (type === 'secondary') {
     return (
       <span className="inline-flex rounded-md shadow-sm">
         <button
@@ -25,7 +25,7 @@ const Button = ({ label, size, onClick, color, type }) => {
         <button
           type="button"
           onClick={onClick}
-          style={{ backgroundColor: color ? color : null }}
+          style={{ backgroundColor: customColor }}
           className={`inline-flex items-center py-2 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150 ${
             color
               ? ''

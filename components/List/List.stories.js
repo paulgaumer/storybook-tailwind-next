@@ -1,21 +1,21 @@
 import React from 'react';
-import CardsGrid from './CardsGrid';
-import * as CardStories from '../Card/Card.stories';
+import List from './List';
+import * as ListItemStories from '../ListItem/ListItem.stories';
 
 export default {
-  component: CardsGrid,
-  title: 'Cards Grid',
+  component: List,
+  title: 'List',
   decorators: [
-    (story) => <div className="mx-auto max-w-6xl mt-32">{story()}</div>,
+    (story) => <div className="max-w-6xl mx-auto mt-32">{story()}</div>,
   ],
 };
 
-const Template = (args) => <CardsGrid {...args} />;
+const Template = (args) => <List {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   items: [
-    { ...CardStories.Default.args, id: 1 },
+    { ...ListItemStories.Default.args, id: 1 },
     { name: 'Jim Halpert', title: 'Salesman', role: 'editor', id: 2 },
     { name: 'Pamela Beesly', title: 'Receptionist', role: 'admin', id: 3 },
     { name: 'Michael Scott', title: 'Regional Manager', role: 'reader', id: 4 },

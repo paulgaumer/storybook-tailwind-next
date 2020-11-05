@@ -7,6 +7,13 @@ export default {
   argTypes: {
     color: { control: 'color' },
   },
+  decorators: [
+    (story) => (
+      <div className="max-w-sm mx-auto mt-32">
+        <div className="flex items-center justify-center">{story()}</div>
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <Button {...args} />;

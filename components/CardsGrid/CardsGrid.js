@@ -4,19 +4,19 @@ import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Card from '../Card/Card';
 
-const CardsList = ({ loading, profiles }) => {
+const CardsGrid = ({ loading, items }) => {
   if (loading) {
     return (
-      <div className="flex flex-col justify-center items-center text-gray-700">
+      <div className="flex flex-col items-center justify-center text-gray-700">
         <Loader type="ThreeDots" color="#4A5568" height={80} width={80} />
         <p className="text-xl">Loading</p>
       </div>
     );
   }
 
-  if (profiles.length === 0) {
+  if (items.length === 0) {
     return (
-      <div className="flex flex-col justify-center items-center text-gray-700 space-y-3">
+      <div className="flex flex-col items-center justify-center space-y-3 text-gray-700">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -38,10 +38,10 @@ const CardsList = ({ loading, profiles }) => {
 
   return (
     <ul class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {profiles.map((profile) => {
+      {items.map((item) => {
         return (
           <li className="col-span-1">
-            <Card key={profile.id} {...profile} />
+            <Card key={item.id} {...item} />
           </li>
         );
       })}
@@ -49,14 +49,14 @@ const CardsList = ({ loading, profiles }) => {
   );
 };
 
-export default CardsList;
+export default CardsGrid;
 
-CardsList.propTypes = {
+CardsGrid.propTypes = {
   loading: PropTypes.bool,
-  profiles: PropTypes.arrayOf(Card.propTypes),
+  items: PropTypes.arrayOf(Card.propTypes),
 };
 
-CardsList.defaultProps = {
+CardsGrid.defaultProps = {
   loading: false,
-  profile: [],
+  items: [],
 };
