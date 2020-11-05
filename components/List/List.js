@@ -85,7 +85,7 @@ List.propTypes = {
   /**
    * List of items to be displayed
    */
-  items: PropTypes.arrayOf(ListItem.propTypes),
+  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 List.defaultProps = {

@@ -40,8 +40,8 @@ const CardsGrid = ({ loading, items }) => {
     <ul class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => {
         return (
-          <li className="col-span-1">
-            <Card key={item.id} {...item} />
+          <li className="col-span-1" key={item.id}>
+            <Card {...item} />
           </li>
         );
       })}
@@ -53,7 +53,7 @@ export default CardsGrid;
 
 CardsGrid.propTypes = {
   loading: PropTypes.bool,
-  items: PropTypes.arrayOf(Card.propTypes),
+  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 CardsGrid.defaultProps = {
