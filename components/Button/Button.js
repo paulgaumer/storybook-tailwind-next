@@ -9,6 +9,7 @@ const Button = ({ label, size, onClick, color, type }) => {
       <span className="inline-flex rounded-md shadow-sm">
         <button
           type="button"
+          data-test="button"
           onClick={onClick}
           style={{ color: customColor, borderColor: customColor }}
           className={`inline-flex items-center py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 ${
@@ -24,6 +25,7 @@ const Button = ({ label, size, onClick, color, type }) => {
       <span className="inline-flex rounded-md shadow-sm">
         <button
           type="button"
+          data-test="button"
           onClick={onClick}
           style={{ backgroundColor: customColor }}
           className={`inline-flex items-center py-2 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150 ${
