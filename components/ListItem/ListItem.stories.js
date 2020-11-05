@@ -6,7 +6,7 @@ export default {
   title: 'List Item',
   decorators: [
     (story) => (
-      <div className="mx-auto max-w-6xl mt-32 flex justify-center">
+      <div className="flex justify-center max-w-6xl mx-auto mt-32">
         <div className="shadow-md">{story()}</div>
       </div>
     ),
